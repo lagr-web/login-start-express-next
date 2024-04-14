@@ -2,6 +2,6 @@
 ## Table of Contents
 - login-express: npm run dev
 - node-server: npm run server
-- create a user in MongoDB collection and thie login behind
-
+- create a user in a MongoDB collection with express and the login behind.
+- frontend NExt app router
 
