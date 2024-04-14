@@ -16,8 +16,6 @@ const router = express.Router();
 router.use(express.json());
 
 router.get("/test", (request, response) => {
-
-  
   response.send("Hello, World root!");
 });
 
@@ -63,6 +61,11 @@ router.post('/register', async (req, res) => {
   try {
 
     const { email, password } = req.body; //request our form input
+
+       // Check if email and password are provided
+       if (!email || !password) {
+        return res.status(400).json({ error: 'Email and password are required' });
+      }
 
     // Check if the email is already registered
     const existingUser = await User.findOne({ email });

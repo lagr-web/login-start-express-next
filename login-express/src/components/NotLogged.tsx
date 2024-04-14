@@ -9,10 +9,17 @@ const page = () =>{
     return(
         
         <>
-        im client and not logged in go and log in here
+
+         <header className="flex flex-row p-2 bg-slate-800">
+        <div className='w-5/6'></div>
+
+        <div className='w-1/6 flex justify-end items-end mr-1'>
+          <span className='pr-1 text-white'>you are not logged in</span>
         <button 
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-         onClick={ ()=> router.push("/api/login")}>klik her</button>
+        className="bg-slate-500 hover:bg-slate-400 text-white font-bold py-1 px-4 rounded focus:outline-none focus:shadow-outline"
+         onClick={ ()=> router.push("/api/login")}>login</button>
+         </div>
+         </header>
         </>
     )
 }
